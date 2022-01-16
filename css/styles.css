@@ -2,6 +2,7 @@
   --second-color: #f7941e;
   --background-color: #fafafa;
   --background-color-two: #f1f1f2;
+  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 html {
   box-sizing: border-box;
@@ -34,10 +35,13 @@ a {
 header {
   background-color: var(--background-color);
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .container {
   width: 1440px;
-  padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -59,6 +63,7 @@ header {
   font-family: Homemade Apple;
   font-size: 18px;
   line-height: 2.2;
+  margin-left: 80px;
 }
 .header-list {
   line-height: 1.2;
@@ -80,16 +85,21 @@ header {
   border-radius: 5px;
   background-color: var(--background-color);
   padding: 14px;
+  cursor: pointer;
 }
 .section-one {
   background-color: var(--background-color-two);
 }
-.section-two {
+.section-two-container {
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-top: 96px;
+  padding-bottom: 161px;
 }
 .section-three {
   background-color: var(--second-color);
+  padding-top: 81px;
+  padding-bottom: 69px;
 }
 .title-one {
   font-size: 56px;
@@ -104,6 +114,8 @@ header {
 .title-three {
   font-size: 32px;
   line-height: 1.19;
+  display: flex;
+  justify-content: center;
 }
 .title-four {
   font-size: 48px;
@@ -112,6 +124,9 @@ header {
 .title-five {
   font-size: 24px;
   line-height: 140.62%;
+  margin-right: 48px;
+  margin-left: 48px;
+  margin-top: 48px;
 }
 .article-one {
   font-size: 20px;
@@ -120,6 +135,8 @@ header {
 }
 .article-two {
   line-height: 135.94%;
+  display: flex;
+  justify-content: center;
 }
 .article-three {
   font-size: 14px;
@@ -127,10 +144,12 @@ header {
 }
 .article-four {
   line-height: 140.62%;
+  margin: 16px 48px;
 }
 .button-header {
   width: 150px;
   height: 44px;
+  margin-right: 34px;
 }
 .button-one {
   background-color: var(--second-color);
@@ -143,19 +162,31 @@ header {
 .button-three {
   background-color: #231f20;
   color: #ffffff;
+  width: 200px;
+  height: 50px;
+  margin-left: 229px;
 }
 .button-four {
   border: 1px solid #000000;
   background-color: var(--second-color);
   color: #000000;
+  width: 200px;
+  height: 50px;
+  margin-left: 16px;
 }
 .item-one {
   font-size: 20px;
   line-height: 1.2;
+  margin-top: 24px;
+  margin-bottom: 74px;
+  margin-left: 24px;
 }
 .item-two {
+  display: inline-block;
   font-size: 14px;
   line-height: 1.36;
+  margin-left: 24px;
+  margin-bottom: 24px;
 }
 .item-three {
   line-height: 140.62%;
@@ -166,6 +197,92 @@ footer {
 .content {
   display: flex;
 }
-.hero-img {
-  width: 705px;
+
+.section-two-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 23px;
+}
+.section-two-article {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+.section-two-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-two-item-li:not(:last-child) {
+  margin-right: 30px;
+}
+.section-two-item-div {
+  background-color: rgba(250, 250, 250, 1);
+  transition: box-shadow var(--timing-function);
+}
+.section-two-item-div:hover {
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.section-three-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-four-container {
+  padding-top: 88px;
+  padding-bottom: 80px;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.section-four-div-one {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.section-four-div-two {
+  background-color: rgba(35, 31, 32, 1);
+  width: 770px;
+}
+.article-three-sf {
+  color: #ffffff;
+  margin-top: 63px;
+  margin-left: 78px;
+}
+
+.title-four-sf {
+  color: #ffffff;
+  margin: 27px 200px 60px 78px;
+}
+
+.item-three-sf {
+  color: #ffffff;
+  margin-left: 78px;
+}
+.section-four-title {
+  margin-bottom: 23px;
+}
+.section-four-article {
+  margin-bottom: 71px;
+}
+.section-four-div-three {
+  display: flex;
+  justify-content: center;
+}
+.section-four-div-four:not(:last-child) {
+  margin-right: 30px;
+}
+.section-four-div-four {
+  width: 570px;
+}
+.article-three-sf-two {
+  display: inline-block;
+  margin-left: 48px;
+  margin-bottom: 50px;
+}
+.section-four-div-four-border {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
 }
